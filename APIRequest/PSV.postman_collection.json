@@ -1,0 +1,101 @@
+{
+	"info": {
+		"_postman_id": "625eb9e9-dfae-44ce-996d-960a211b60b2",
+		"name": "PSV",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "RetrieveGrantDocs",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"year\": \"{{YEAR_NUM}}\",\r\n    \"week\": \"{{WEEK_NUM}}\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://{{API_ID}}.execute-api.us-east-1.amazonaws.com/Prod/grant/retrieve/",
+					"protocol": "https",
+					"host": [
+						"{{API_ID}}",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"Prod",
+						"grant",
+						"retrieve",
+						""
+					]
+				},
+				"description": "API Requests for the PSV USPTO docs"
+			},
+			"response": []
+		},
+		{
+			"name": "RetrieveApplicationDocs",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"year\": {{YEAR_NUM}},\"week\": {{WEEK_NUM}}}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://{{API_ID}}.execute-api.us-east-1.amazonaws.com/Prod/app/retrieve/",
+					"protocol": "https",
+					"host": [
+						"{{API_ID}}",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"Prod",
+						"app",
+						"retrieve",
+						""
+					]
+				},
+				"description": "API Requests for the PSV USPTO docs"
+			},
+			"response": []
+		}
+	]
+}
